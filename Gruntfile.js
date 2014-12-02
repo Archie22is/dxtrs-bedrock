@@ -43,6 +43,7 @@ module.exports = function(grunt) {
         },
 
         watch: {
+            options: { livereload: true },
             grunt: { files: ['Gruntfile.js'] },
 
             sass: {
@@ -57,23 +58,14 @@ module.exports = function(grunt) {
                 ],
                 tasks: ['uglify']
             },
-
-            image: {
-                files: [
-                    '_images/**/*.jpg',
-                    '_images/**/*.png',
-                    '_images/**/*.gif'
-                ],
-                tasks: ['imagemin']
-            }
         }
     });
 
-   grunt.loadNpmTasks('grunt-sass');
-   grunt.loadNpmTasks('grunt-contrib-watch');
-   grunt.loadNpmTasks('grunt-contrib-uglify');
-   grunt.loadNpmTasks('grunt-contrib-imagemin');
-   grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-notify');
 
     grunt.registerTask('build', ['sass', 'uglify', 'imagemin']);
     grunt.registerTask('default', ['build', 'watch']);
