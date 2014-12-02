@@ -21,6 +21,7 @@ This is the very basic setup for a WordPress theme using [Zurb's Foundation](htt
 ## Usage
 
 1. To run Grunt issue the following in the cli: `grunt` and the plugin _watch_ will watch your theme for any changes and grunt will run the appropriate task.
+2. Put all unoptimised images into the `_images` directory to have grunt optimise them into an `images` directory
 
 
 ## Dependencies
