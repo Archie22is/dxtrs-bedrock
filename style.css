@@ -1,0 +1,14 @@
+/*
+    Theme Name: Dxtrs Bedrock
+    Created on : December, 2014
+    Author: Claude Müller
+    Author URI: http://dxt.rs
+    URI: http://dxt.rs
+	Version: 1.0
+    Description: Main style sheet for the Bedrock WordPress Foundation theme template
+    Tags: black, white
+*/
+
+@import url("css/app.css");
+@import url("css/style.css");
+

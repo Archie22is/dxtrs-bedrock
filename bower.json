@@ -1,0 +1,6 @@
+{
+    "name": "dxtrs_bedrock",
+    "dependencies": {
+        "foundation": "zurb/bower-foundation"
+    }
+}

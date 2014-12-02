@@ -1,0 +1,4 @@
+/**
+ * JS file for Bedrock
+ */
+
