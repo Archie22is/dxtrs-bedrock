@@ -8,7 +8,7 @@
 
 ## Description
 
-This is the very basic possible setup for a WordPress theme using [Zurb's Foundation](http://foundation.zurb.com/) css framework along with [SASS](http://sass-lang.com/); [NPM](https://www.npmjs.org/) and [Bower](http://bower.io/) for package management; and [Grunt](http://gruntjs.com/) as a task runner.
+This is the very basic setup for a WordPress theme using [Zurb's Foundation](http://foundation.zurb.com/) css framework along with [SASS](http://sass-lang.com/); [NPM](https://www.npmjs.org/) and [Bower](http://bower.io/) for package management; and [Grunt](http://gruntjs.com/) as a task runner.
 
 
 ## Installation
