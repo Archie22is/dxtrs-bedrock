@@ -8,15 +8,16 @@ define( 'TEMPPATH', get_stylesheet_directory_uri() );
 define( 'IMAGES', TEMPPATH . '/images' );
 define( 'JS', TEMPPATH . '/js' );
 define( 'CSS', TEMPPATH . '/css' );
-define( 'INCLUDES', TEMPPATH . '/includes' );
+define( 'INCLUDES', 'includes' );
 define( 'ADMIN', INCLUDES . '/admin' );
-define( 'INCLUDES_DIR', get_template_directory() . '/' . INCLUDES );
+define( 'TEMP_DIR', get_template_directory() );
+define( 'INCLUDES_DIR', TEMP_DIR . '/' . INCLUDES );
 
 /**
  * Setup text domain
  */
 function dxtrs_bedrock_setup_text_domain() {
-    load_theme_textdomain( 'dxtrs_bedrock-text-domain', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'dxtrs_bedrock-text-domain', TEMP_DIR . '/languages' );
 }
 add_action( 'after_setup_theme', 'dxtrs_bedrock_setup_text_domain' );
 

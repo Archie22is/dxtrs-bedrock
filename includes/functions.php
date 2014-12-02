@@ -61,5 +61,5 @@ add_action( 'login_enqueue_scripts', 'dxtrs_bedrock_load_login_css' );
 /**
  * Bedrock theme settings
  */
-require_once( ADMIN . '/theme-settings.php' );
+require_once( 'admin/theme-settings.php' );
 
