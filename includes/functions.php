@@ -7,14 +7,16 @@
 /**
  * Add menu support
  */
-add_theme_support( 'nav_menus' );
-if ( function_exists( 'register_nav_menus' ) ) {
-    register_nav_menus(
-        array(
-            'primary_nav'   => 'Header Navigation',
-            'footer_nav'    => 'Footer Navigation'
-        )
-    );
+if ( function_exists( 'add_theme_support' ) ) {
+    add_theme_support( 'nav_menus' );
+    if ( function_exists( 'register_nav_menus' ) ) {
+        register_nav_menus(
+            array(
+                'primary_nav'   => 'Header Navigation',
+                'footer_nav'    => 'Footer Navigation'
+            )
+        );
+    }
 }
 
 /**
