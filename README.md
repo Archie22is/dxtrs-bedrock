@@ -22,17 +22,7 @@ This is the very basic setup for a WordPress theme using [Zurb's Foundation](htt
 
 1. To run Grunt issue the following in the cli: `grunt` and the plugin _watch_ will watch your theme for any changes and grunt will run the appropriate task.
 2. Put all unoptimised images into the `_images` directory
-3. Upon deployment, run `grunt build` and exclude the following files and directories from your product:
-    - .bowerrc
-    - .git/
-    - .gitignore
-    - Gruntfile.js
-    - \_images/
-    - bower.json
-    - bower\_components/
-    - node\_modules/
-    - package.json
-    - scss/
+3. Upon deployment, run `grunt production`. The product can then be found in the build/ directory. Be sure to change all references to js/\*.js to js/\*.min.js.
 4. Livereload is enabled on this theme, so if you'd like to make use of it, install the appropriate [plugin](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-) for your browser
 
 
