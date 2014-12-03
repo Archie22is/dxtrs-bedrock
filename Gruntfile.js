@@ -42,6 +42,43 @@ module.exports = function(grunt) {
             }
         },
 
+        copy: {
+            main: {
+                files: [
+                    {
+                        expand: true,
+                        src:    ['images/**'],
+                        dest:   'build/'
+                    },
+                    {
+                        expand: true,
+                        src:    ['js/**/*.min.js'],
+                        dest:   'build/',
+                    },
+                    {
+                        expand: true,
+                        src:    ['css/**'],
+                        dest:   'build/',
+                    },
+                    {
+                        expand: true,
+                        src:    ['**/*.php'],
+                        dest:   'build/',
+                        options: {
+                            process: function (content, srcpath) {
+                                return content.replace(/\.js/g, ".min.js");
+                            }
+                        }
+                    },
+                    {
+                        expand: true,
+                        src:    ['style.css', 'screenshot.png'],
+                        dest:   'build/'
+                    }
+                ]
+            }
+        },
+
         watch: {
             options: { livereload: true },
             grunt: { files: ['Gruntfile.js'] },
@@ -65,8 +102,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-notify');
 
     grunt.registerTask('build', ['sass', 'uglify', 'imagemin']);
+    grunt.registerTask('production', ['sass', 'uglify', 'imagemin', 'copy']);
     grunt.registerTask('default', ['build', 'watch']);
 }
