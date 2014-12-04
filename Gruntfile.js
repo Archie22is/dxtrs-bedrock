@@ -88,6 +88,10 @@ module.exports = function(grunt) {
                 tasks: ['sass']
             },
 
+            php: {
+                files: ['**/*.php']
+            },
+
             uglify: {
                 files: [
                     'js/**/*.js', '!js/**/*.min.js',
